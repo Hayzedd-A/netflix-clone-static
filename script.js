@@ -72,9 +72,20 @@ $("document").ready(() => {
       // Split the answer into paragraphs and append to the answer div
       const answerParagraphs = item.answer
         .split("\n")
-        .map(answerPart => `<p>${answerPart.trim()}</p>`)
+        .map((answerPart) => `<p>${answerPart.trim()}</p>`)
         .join("");
       $(".faq-container .faq:last-child .answer").append(answerParagraphs);
     });
+  });
+
+  $(".faq-container").on("click", ".question", function () {
+    const parent = $(this).parent();
+    if (parent.hasClass("current")) {
+      $(".faq").removeClass("current");
+    } else {
+      $(".faq").removeClass("current");
+      $(this).parent().addClass("current");
+    }
+    console.log(parent);
   });
 });

@@ -14,7 +14,7 @@ body > * {
 
 body {
   display: grid;
-  gap: 1em;
+  gap: 2em;
   overflow-x: hidden;
   background-color: black;
   color: white;
@@ -129,7 +129,7 @@ section.banner p:nth-child(3) {
   position: relative;
   height: 3rem;
   z-index: 1;
-  top: -3em;
+  top: -2em;
 }
 .curve-container-parent .curve-container {
   box-sizing: border-box;
@@ -251,9 +251,9 @@ section.reason-to-join .content span img {
   max-width: 7em;
 }
 
-section.frequently-asked-question {
+section.frequently-asked-question .faq-container {
   display: grid;
-  gap: 2em;
+  gap: 0.5em;
 }
 section.frequently-asked-question .faq {
   display: grid;
@@ -274,8 +274,25 @@ section.frequently-asked-question .faq .question:hover {
   background-color: rgb(65, 65, 65);
 }
 section.frequently-asked-question .faq .answer {
-  padding: 2em;
+  height: 0;
+  overflow: hidden;
   display: grid;
   gap: 1em;
+  transition: height 0.3s ease;
+  transform-origin: top;
   background-color: rgb(45, 45, 45);
+}
+section.frequently-asked-question .current .answer {
+  height: unset;
+  padding: 2em;
+}
+section.frequently-asked-question .current span.icon {
+  rotate: 45deg;
+}
+
+section.subscribe {
+  margin-top: 2em;
+  display: grid;
+  justify-content: center;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
