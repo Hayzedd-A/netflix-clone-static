@@ -28,12 +28,10 @@ body > * {
 body {
   display: grid;
   gap: 2em;
-  overflow-x: hidden;
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
   padding: 1em 0;
-  overflow-x: hidden;
 }
 .bannerContainer {
   display: grid;
@@ -151,6 +149,7 @@ section.banner {
   height: 3rem;
   z-index: 1;
   top: -2em;
+  overflow: hidden;
   .curve-container {
     box-sizing: border-box;
     .curve {
