@@ -1,13 +1,13 @@
-$("body").click(() => {
-  console.log("event captured on body");
-  if ($(".form input").val().length) {
-    console.log("if run");
-    $(".form label").addClass("content");
-  } else {
-    console.log("else run");
-    $(".form label").removeClass("content");
-  }
-});
+// $("body").click(() => {
+//   console.log("event captured on body");
+//   if ($(".form input").val().length) {
+//     console.log("if run");
+//     $(".form label").addClass("content");
+//   } else {
+//     console.log("else run");
+//     $(".form label").removeClass("content");
+//   }
+// });
 
 $("document").ready(() => {
   console.log("DOM fully loaded and parsed");
@@ -72,7 +72,7 @@ $("document").ready(() => {
       // Split the answer into paragraphs and append to the answer div
       const answerParagraphs = item.answer
         .split("\n")
-        .map((answerPart) => `<p>${answerPart.trim()}</p>`)
+        .map(answerPart => `<p>${answerPart.trim()}</p>`)
         .join("");
       $(".faq-container .faq:last-child .answer").append(answerParagraphs);
     });
@@ -87,5 +87,26 @@ $("document").ready(() => {
       $(this).parent().addClass("current");
     }
     console.log(parent);
+  });
+
+  const footerLink = [
+    "Help Center",
+    "Account",
+    "Media Center",
+    "Investor Relations",
+    "Jobs",
+    "Ways to Watch",
+    "Terms of Use",
+    "Privacy",
+    "Cookie Preferences",
+    "Corporate Information",
+    "Contact Us",
+    "Speed Test",
+    "Legal Notices",
+    "Only on Netflix",
+  ];
+  footerLink.forEach(link => {
+    const footerItem = $("<a>").text(link);
+    $(".others").append(footerItem);
   });
 });
