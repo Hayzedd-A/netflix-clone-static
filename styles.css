@@ -20,12 +20,10 @@ body > * {
 body {
   display: grid;
   gap: 2em;
-  overflow-x: hidden;
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
   padding: 1em 0;
-  overflow-x: hidden;
 }
 
 .bannerContainer {
@@ -150,6 +148,7 @@ section.banner p:nth-child(3) {
   height: 3rem;
   z-index: 1;
   top: -2em;
+  overflow: hidden;
 }
 .curve-container-parent .curve-container {
   box-sizing: border-box;
